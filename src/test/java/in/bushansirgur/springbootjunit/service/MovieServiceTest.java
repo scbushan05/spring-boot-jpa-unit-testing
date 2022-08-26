@@ -121,6 +121,7 @@ public class MovieServiceTest {
 		movieService.deleteMovie(movieId);
 		
 		verify(movieRepository, times(1)).delete(avatarMovie);
+		
 	}
 }
 

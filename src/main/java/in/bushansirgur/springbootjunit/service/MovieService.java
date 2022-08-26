@@ -38,6 +38,7 @@ public class MovieService {
 	public void deleteMovie(Long id) {
 		Movie existingMovie = movieRepository.findById(id).get();
 		movieRepository.delete(existingMovie);
+		
 	}
 }
 
