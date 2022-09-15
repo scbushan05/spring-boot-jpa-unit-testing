@@ -55,8 +55,8 @@ public class MoviesIntegrationTest {
 		titanicMovie.setGenera("Romance");
 		titanicMovie.setReleaseDate(LocalDate.of(2004, Month.JANUARY, 10));
 		
-		titanicMovie = restTemplate.postForObject(baseUrl, titanicMovie, Movie.class);
-		avatarMovie = restTemplate.postForObject(baseUrl, avatarMovie, Movie.class);
+		avatarMovie = movieRepository.save(avatarMovie);
+		titanicMovie = movieRepository.save(titanicMovie);
 	}
 	
 	@AfterEach
